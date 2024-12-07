@@ -1,0 +1,720 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: 'Stretch';
+    src: url(StretchPro.otf);
+}
+
+@font-face {
+    font-family: 'Black-Han';
+    src: url(BlackHanSans-Regular.ttf);
+}
+
+:root{
+    --color-rojo: #EE2A38;
+    --color-blanco: #FFFFFF;
+    --color-azul: #0044A5;
+    --color-negro: #3E3C3D;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+
+
+/* Barra de navegación */
+
+/* Media */
+@media only screen and (min-width: 360px){
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    /* logo */
+    
+    .logo{
+        display: flex;
+        width: 100%;
+        height: 6rem;
+        width: 8rem;
+        align-items:center;
+        justify-content: flex-end;
+    }
+
+    .logo img{
+        width: 90%;
+
+    }
+
+    /* titulo principal */
+
+    .titulo{
+        margin-left: 20%;
+        top: 20rem;
+        width: 100%;
+        display: flex;
+        font-size: 4rem;
+        font-family: 'Stretch';
+        color: var(--color-negro);
+        flex-direction: column;
+        transform: rotate(90deg);
+        flex-wrap: wrap;
+        align-content: center;
+        padding-left: 12rem;
+    }
+
+    #palabra-1{
+        text-align: left;
+        align-items: end;
+    }
+
+    #palabra-2{
+        text-align: right;
+    }
+
+    #palabra-3{
+        text-align: left;
+    }
+
+    /* tarjeta de texto */
+
+    .info-1{
+        margin-top: 20rem;
+        width: 75%;
+        margin-left: 6%;
+    }
+
+    .appear{
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .subtitulo{
+        margin-bottom: 1rem;
+        font-family: 'Stretch';
+        font-size: 1.2rem;
+    }
+
+    .texto{
+        line-height: 1.2rem;
+        margin-bottom: 4rem;
+    }
+
+    
+    .info-2{
+        width: 100%;
+        text-align: right;
+        display: flex;
+        flex-direction: row-reverse;
+        margin-bottom: 4rem;
+    }
+
+    #direccion{
+        padding-right: 6%;
+        width: 70%;
+        font-family: 'Stretch';
+    }
+
+    
+    /* primera tarjeta */
+
+    .tarjeta-circular{
+        width: 90%;
+        border-radius: 20rem;
+        border: solid 1px var(--color-negro);
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+    }
+
+    .img-valor{
+        margin-top: 5rem;
+        overflow: hidden;
+        border-radius: 20rem;
+        display: flex;
+        height: 20rem;
+        width: 8rem;
+        image-rendering: optimizeQuality;
+        justify-content: center;
+        position: absolute;
+        z-index: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .valor-4{
+        justify-content: end;
+    }
+
+    .seccion-2{
+        margin-top: 0rem;
+    }
+
+    .text-right{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        z-index: 1;
+        font-family: 'Stretch';
+
+    }
+
+    .silaba{
+        margin-top: 6rem;
+        font-size: 3rem;
+        font-family: 'Stretch';
+    }
+
+    
+    .silaba-placeholder{
+        margin-top: 6rem;
+        font-size: 3rem;
+        font-family: 'Stretch';
+        visibility: hidden;
+
+    }
+
+    .text-left{
+        text-align: right;
+        flex-direction: column;
+        display: flex;
+        font-family: 'Stretch';
+        justify-content: center;
+        z-index: 1;
+        margin-top: 4rem;
+    }
+
+    .valor-1{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .valor-final{
+        margin-bottom: 5rem;
+    }
+
+    .tarjeta-circular-2{
+        width: 70%;
+        border-radius: 20rem;
+        border: solid 1px var(--color-negro);
+        margin: 4rem auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+    }
+
+    .palabra-right{
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: rotate(180deg);
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .palabra-left{
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .text-right-2{
+        justify-content: center;
+    }
+
+    .text-left-2{
+        text-align: right;
+        flex-direction: column;
+        display: flex;
+        font-family: 'Stretch';
+        justify-content: center;
+        z-index: 1;
+        margin-top: 0rem;
+        justify-content: center;
+    }
+
+    .forjando-1{
+        margin: 5rem auto;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .coreano{
+        font-family: 'Black-Han';
+    }
+
+    /* tarjeta de Mision */
+
+    .tarjeta-cuadrada{
+        width: 80%;
+        border-radius: 3rem;
+        border: solid 1px var(--color-negro);
+        margin: 4rem auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 2rem;
+    }
+
+    .trajeta-cuadrada-mision{
+        font-family: 'Stretch';
+        color: var(--color-rojo);
+        line-height: 2rem;
+    }
+
+
+    /* tarjeta de Vision */
+    .trajeta-cuadrada-vision{
+        font-family: 'Stretch';
+        color: var(--color-azul);
+        line-height: 2rem;
+    }
+
+
+    /* Footer */
+    footer{
+        display: flex;
+        background-color: var(--color-negro);
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .botones{
+        margin: 4rem auto;
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .icono-red{
+        width: 4rem;
+
+    }
+
+    .img-w{
+        width: 100%;
+    }
+
+    .derechos{
+        display: flex;
+        color: var(--color-blanco);
+        padding: 1rem 0;
+        justify-content: center;
+    }
+
+    p{
+        line-height: 1.2rem;
+    }
+
+    .gsap-marker-end{
+        visibility: hidden;
+    }
+
+    .gsap-marker-start{
+        visibility: hidden;
+    }
+
+    .gsap-marker-scroller-end{
+        visibility: hidden;
+    }
+
+    .gsap-marker-scroller-start{
+        visibility: hidden;
+    }
+
+
+
+    /*   animación scroll */
+
+
+    .mouse {
+        width:18px;
+        height:30px;
+        border:1px solid #000;
+        border-radius:9px;
+        position:relative;
+        margin:30px auto;
+        visibility: hidden;
+    }
+      
+    .mouse:after {
+        content:"";
+        position:absolute;
+        width:4px;
+        height:4px;
+        border-radius:2px;
+        background: crimson;
+        display:block;
+        left:50%;
+        transform:translateX(-50%);
+        top:5px;
+        animation: control 1.5s infinite;
+    }
+      
+    @keyframes control {
+        0% {
+          opacity:1;
+          top:5px;
+        }
+        60% {
+          opacity:1;
+        }
+        90%{
+          top:20px;
+        }
+        100%{
+          opacity:0
+        }
+    }
+      
+    .scrollBox {
+        position:fixed;
+        width:4px;
+        height:50px;
+      /*   border:1px solid #FA003c; */
+        overflow:hidden;
+        bottom:50px;
+        left:.5rem;
+    }
+    .scrollBox:after {
+        content:"";
+        position:absolute;
+        top:-50px;
+        height:50px;
+        width:4px;
+        background: var(--color-rojo);
+        animation:scrollDrive 2s ease infinite;
+    }
+      
+    @keyframes scrollDrive {
+        0% {
+          top:-50px;
+          background: var(--color-azul);
+        }
+        50% {
+          top:50px;
+          background: var(--color-rojo);
+        }
+        100% {
+          top:50px;
+          background: var(--color-azul);
+        }
+    }
+      
+    .vertical-text {
+        margin: 0 auto 2em;
+        width: 0;
+        word-wrap: break-word;
+        position:fixed;
+        left:.5rem;
+        bottom:90px;
+        font-size:9px;
+        text-transform:uppercase;    
+    }
+
+}
+
+@media only screen and (min-width: 720px){
+    .logo{
+        display: flex;
+        width: 100%;
+        height: 6rem;
+        width: 10rem;
+        align-items:center;
+        justify-content: flex-end;
+    }
+
+    .logo img{
+        width: 80%;
+
+    }
+
+    .titulo{
+        margin-left: 0;
+        padding-left: 0;
+        transform: rotate(0);
+        margin-top: 10rem;
+    }
+
+    /* tarjeta de texto */
+
+    .info-1{
+        margin-top: 10rem;
+        width: 75%;
+        margin-left: 6%;
+    }
+
+    
+    /* primera tarjeta */
+
+    .tarjeta-circular{
+        width: 70%;
+
+    }
+
+    .img-valor{
+        margin-top: 10rem;
+        height: 30rem;
+        width: 8rem;
+    }
+
+    .seccion-2{
+        margin-top: 0rem;
+    }
+
+    .silaba{
+        margin-top: 8rem;
+        font-size: 4rem;
+    }
+
+    
+    .silaba-placeholder{
+        margin-top: 8rem;
+        font-size: 4rem;
+
+    }
+
+    .text-left{
+        margin-top: 6rem;
+    }
+
+    .valor-final{
+        margin-bottom: 6rem;
+    }
+
+
+    .tarjeta-circular-2{
+        width: 70%;
+        border-radius: 20rem;
+        border: solid 1px var(--color-negro);
+        margin: 4rem auto;
+    }
+
+    .palabra-right{
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: rotate(180deg);
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .palabra-left{
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .text-left-2{
+        text-align: center;
+        flex-direction: column;
+        display: flex;
+        font-family: 'Stretch';
+        justify-content: center;
+        z-index: 1;
+        margin-top: 0rem;
+        justify-content: center;
+    }
+
+    .forjando-1{
+        margin: 10rem auto;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    /* tarjeta de Mision */
+
+    .tarjeta-cuadrada{
+        width: 60%;
+        border-radius: 3rem;
+        border: solid 1px var(--color-negro);
+        margin: 4rem auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 2rem;
+    }
+
+    .trajeta-cuadrada-mision{
+        font-family: 'Stretch';
+        color: var(--color-rojo);
+        line-height: 2rem;
+    }
+
+
+    /* tarjeta de Vision */
+    .trajeta-cuadrada-vision{
+        font-family: 'Stretch';
+        color: var(--color-azul);
+        line-height: 2rem;
+    }
+
+    /* Animación scroll */
+
+    .mouse {
+        width:18px;
+        height:30px;
+        border:1px solid #000;
+        border-radius:9px;
+        position:relative;
+        margin:30px auto;
+        visibility: visible;
+    }
+
+    .scrollBox {
+        left:1.5rem;
+    }
+
+    .vertical-text {
+        left:1.5rem;
+    }
+
+
+
+}
+
+@media only screen and (min-width: 1024px){
+    .info-1{
+        margin-top: 10rem;
+        width: 50%;
+        margin-left: 6%;
+    }
+
+    .logo{
+        display: flex;
+        width: 100%;
+        height: 6rem;
+        width: 12rem;
+        align-items:center;
+        justify-content: flex-end;
+    }
+
+    .logo img{
+        width: 70%;
+
+    }
+
+    /* primera tarjeta */
+
+    .tarjeta-circular{
+        width: 65%;
+    }
+
+    .img-valor{
+        margin-top: 10rem;
+        height: 30rem;
+        width: 10rem;
+    }
+
+    .seccion-2{
+        margin-top: 0rem;
+    }
+
+    .silaba{
+        margin-top: 10rem;
+        font-size: 5rem;
+    }
+
+    
+    .silaba-placeholder{
+        margin-top: 10rem;
+        font-size: 5rem;
+
+    }
+
+    .text-left{
+        margin-top: 7.5rem;
+    }
+
+    .valor-final{
+        margin-bottom: 10rem;
+    }
+    
+    .tarjeta-circular-2{
+        width: 65%;
+        border-radius: 20rem;
+        border: solid 1px var(--color-negro);
+        margin: 4rem auto;
+    }
+
+    .palabra-right{
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: rotate(180deg);
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .palabra-left{
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .text-left-2{
+        text-align: center;
+        flex-direction: column;
+        display: flex;
+        font-family: 'Stretch';
+        justify-content: center;
+        z-index: 1;
+        margin-top: 0rem;
+        justify-content: center;
+    }
+
+    
+    /* tarjeta de Mision */
+
+    .tarjeta-cuadrada{
+        width: 30%;
+        border-radius: 3rem;
+        border: solid 1px var(--color-negro);
+        margin: 4rem auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 2rem;
+    }
+
+    .trajeta-cuadrada-mision{
+        font-family: 'Stretch';
+        color: var(--color-rojo);
+        line-height: 4rem;
+    }
+
+
+    /* tarjeta de Vision */
+    .trajeta-cuadrada-vision{
+        font-family: 'Stretch';
+        color: var(--color-azul);
+        line-height: 2rem;
+    }
+
+    
+}
